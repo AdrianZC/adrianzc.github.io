@@ -90,10 +90,6 @@ nav a {
 
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem; /* Decrease font size */
-    }
-    
     /* Show mobile menu icon */
     .mobile-menu-icon {
         display: block;
@@ -103,25 +99,63 @@ nav a {
     /* Hide regular nav links */
     .nav-links {
         display: none;
-        position: absolute;
-        top: 5rem; /* Adjust the top position as needed */
-        right: 2rem; /* Adjust the right position as needed */
-        background-color: #fff; /* Background color of the mobile menu */
-        border-radius: 5px; /* Optional: add some border radius */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add some box shadow */
-        padding: 1rem; /* Optional: add padding */
     }
 
     /* Show nav links when menu is open */
     .nav-links.active {
         display: flex;
-        flex-direction: column; /* Stack links vertically */
-        align-items: flex-end; /* Align links to the right */
     }
+}
 
-    /* Adjust individual link style */
-    .nav-links.active li {
-        margin-left: 0; /* Remove left margin */
-        margin-bottom: 1rem; /* Add bottom margin between links */
+/* Main content sections */
+section {
+    display: flex; /* Use flexbox for section content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    padding: 0rem 1rem;
+    flex: 1;
+    margin: 0;
+}
+
+/* Page section */
+.page {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Page active section */
+.page.active {
+    display: flex;
+    animation: slideIn 0.5s ease-in-out; /* Add a slide-in animation */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+}
+
+/* Contact section */
+.contact-content {
+    text-align: left;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100;
+    height: 100;
+    z-index: -1;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
     }
 }
