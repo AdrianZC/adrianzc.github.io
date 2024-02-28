@@ -83,6 +83,30 @@ nav a {
     color: #007bff;
 }
 
+/* Mobile menu icon */
+.mobile-menu-icon {
+    display: none; /* Initially hide on larger screens */
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    /* Show mobile menu icon */
+    .mobile-menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Hide regular nav links */
+    .nav-links {
+        display: none;
+    }
+
+    /* Show nav links when menu is open */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
 /* Main content sections */
 section {
     display: flex; /* Use flexbox for section content */
