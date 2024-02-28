@@ -85,41 +85,77 @@ nav a {
 
 /* Mobile menu icon */
 .mobile-menu-icon {
-    display: none;
-    cursor: pointer;
+    display: none; /* Initially hide on larger screens */
 }
 
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #000;
-    margin: 5px 0;
-}
-
+/* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
+    /* Show mobile menu icon */
     .mobile-menu-icon {
         display: block;
+        cursor: pointer;
     }
 
+    /* Hide regular nav links */
     .nav-links {
         display: none;
-        position: absolute;
-        top: 5rem;
-        right: 2rem;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
     }
 
+    /* Show nav links when menu is open */
     .nav-links.active {
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
     }
+}
 
-    .nav-links.active li {
-        margin-left: 0;
-        margin-bottom: 1rem;
+/* Main content sections */
+section {
+    display: flex; /* Use flexbox for section content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    padding: 0rem 1rem;
+    flex: 1;
+    margin: 0;
+}
+
+/* Page section */
+.page {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Page active section */
+.page.active {
+    display: flex;
+    animation: slideIn 0.5s ease-in-out; /* Add a slide-in animation */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+}
+
+/* Contact section */
+.contact-content {
+    text-align: left;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100;
+    height: 100;
+    z-index: -1;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
     }
 }
