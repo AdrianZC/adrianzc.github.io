@@ -85,10 +85,11 @@ nav a {
 
 /* Mobile menu icon */
 .mobile-menu-icon {
-    display: none;
+    display: none; /* Initially hide on larger screens */
     cursor: pointer;
 }
 
+/* Style for the bars */
 .bar {
     width: 25px;
     height: 3px;
@@ -96,30 +97,39 @@ nav a {
     margin: 5px 0;
 }
 
+/* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem; /* Decrease font size */
+    }
+
+    /* Show mobile menu icon */
     .mobile-menu-icon {
         display: block;
     }
 
+    /* Hide regular nav links */
     .nav-links {
         display: none;
         position: absolute;
-        top: 5rem;
-        right: 2rem;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
+        top: 5rem; /* Adjust the top position as needed */
+        right: 2rem; /* Adjust the right position as needed */
+        background-color: #fff; /* Background color of the mobile menu */
+        border-radius: 5px; /* Optional: add some border radius */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add some box shadow */
+        padding: 1rem; /* Optional: add padding */
     }
 
+    /* Show nav links when menu is open */
     .nav-links.active {
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+        flex-direction: column; /* Stack links vertically */
+        align-items: flex-end; /* Align links to the right */
     }
 
+    /* Adjust individual link style */
     .nav-links.active li {
-        margin-left: 0;
-        margin-bottom: 1rem;
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 1rem; /* Add bottom margin between links */
     }
 }
