@@ -99,11 +99,26 @@ nav a {
     /* Hide regular nav links */
     .nav-links {
         display: none;
+        position: absolute;
+        top: 5rem; /* Adjust the top position as needed */
+        right: 2rem; /* Adjust the right position as needed */
+        background-color: #fff; /* Background color of the mobile menu */
+        border-radius: 5px; /* Optional: add some border radius */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add some box shadow */
+        padding: 1rem; /* Optional: add padding */
     }
 
     /* Show nav links when menu is open */
     .nav-links.active {
         display: flex;
+        flex-direction: column; /* Stack links vertically */
+        align-items: flex-end; /* Align links to the right */
+    }
+
+    /* Adjust individual link style */
+    .nav-links.active li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 1rem; /* Add bottom margin between links */
     }
 }
 
@@ -144,8 +159,8 @@ section {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100;
-    height: 100;
+    width: 100%;
+    height: 100%;
     z-index: -1;
 }
 
