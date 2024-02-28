@@ -85,7 +85,7 @@ nav a {
 
 /* Mobile menu icon */
 .mobile-menu-icon {
-    display: flex;
+    display: none;
     cursor: pointer;
 }
 
