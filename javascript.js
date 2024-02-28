@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-
     // Get the navigation links
     const navLinks = document.querySelectorAll('nav a');
 
@@ -52,4 +51,20 @@ document.addEventListener('DOMContentLoaded', function () {
     mobileMenuIcon.addEventListener('click', function () {
         navLinksContainer.classList.toggle('active');
     });
+
+    // Dynamically change the name to "AZC" on mobile screens
+    function updateName() {
+        const nameElement = document.querySelector('header h1');
+        if (window.innerWidth <= 768) {
+            nameElement.textContent = "AZC";
+        } else {
+            nameElement.textContent = "Adrian Zhu Chou";
+        }
+    }
+
+    // Initial call to update the name based on screen width
+    updateName();
+
+    // Listen for window resize events to update the name dynamically
+    window.addEventListener('resize', updateName);
 });
