@@ -90,8 +90,11 @@ nav a {
 
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
+    header h1 span.full-name {
+        display: none; /* Hide the full name on mobile */
+    }
+    header h1 span.abbreviation {
+        display: inline; /* Show the abbreviation on mobile */
     }
     .mobile-menu-icon {
         display: block;
@@ -102,15 +105,6 @@ nav a {
     }
     .nav-links.active {
         display: flex;
-    }
-    /* Hide the original name and show the abbreviation */
-    header h1 {
-        display: none;
-    }
-    header::after {
-        content: "AZC";
-        font-family: "Namdhinggo", sans-serif; /* Specify the same font-family as header h1 */
-        font-size: 2rem; /* Adjust the font size as needed */
     }
 }
 
