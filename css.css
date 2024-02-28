@@ -103,6 +103,12 @@ nav a {
     .nav-links.active {
         display: flex;
     }
+
+    header h1::after {
+        content:"AZC";
+        font-size: 1.2rem;
+        margin-left: 5px;
+    }
 }
 
 /* Main content sections */
