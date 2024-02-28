@@ -90,15 +90,24 @@ nav a {
 
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
-    /* Change the font size and content of your name */
     header h1 {
-        font-size: 1.5rem; /* Adjust font size */
+        font-size: 1.5rem; /* Decrease font size */
+    }
+    
+    /* Show mobile menu icon */
+    .mobile-menu-icon {
+        display: block;
+        cursor: pointer;
     }
 
-    header h1::after {
-        content: "AZC"; /* Change the content to "AZC" */
-        font-size: 1rem; /* Adjust font size */
-        margin-left: 0.5rem; /* Add some space between "AZC" and the name */
+    /* Hide regular nav links */
+    .nav-links {
+        display: none;
+    }
+
+    /* Show nav links when menu is open */
+    .nav-links.active {
+        display: flex;
     }
 }
 
