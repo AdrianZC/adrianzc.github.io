@@ -44,11 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Get the navigation links container
-    const navLinksContainer = document.querySelector('.container nav');
-
     // Get the mobile menu icon
     const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+
+    // Get the navigation links container
+    const navLinksContainer = document.querySelector('nav');
 
     // Toggle menu visibility when the mobile menu icon is clicked
     mobileMenuIcon.addEventListener('click', function () {
