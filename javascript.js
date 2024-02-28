@@ -44,6 +44,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    const headerTitle = document.querySelector('header h1');
+
+    // Check if the screen width is less than or equal to 768 pixels
+    if (window.innerWidth <= 768) {
+        headerTitle.textContent = 'AZC';
+    }
+
     // Get the mobile menu icon
     const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
 
