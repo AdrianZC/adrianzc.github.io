@@ -1,34 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Get the navigation links
     const navLinks = document.querySelectorAll('nav a');
-
-    // Get all sections with class 'page'
     const sections = document.querySelectorAll('.page');
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    const navLinksContainer = document.querySelector('nav');
 
-    // Add a click event listener to each navigation link
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            // Check if the link is an internal link (starts with #)
-            if (link.getAttribute('href').startsWith('#')) {
-                e.preventDefault(); // Prevent the default behavior of link clicks
-        
-                // Get the target section ID from the link's 'href' attribute
-                const targetId = link.getAttribute('href').substring(1);
-        
-                // Hide all sections
-                sections.forEach(section => {
-                    section.classList.remove('active');
-                });
-        
-                // Show the target section
-                const targetSection = document.getElementById(targetId);
-                targetSection.classList.add('active');
-            }
-            // For external links, allow the default behavior
-        });
-    });
-
-    // Initialize Particles.js
     particlesJS('particles-js', {
         particles: {
             number: { value: 100 },
@@ -42,5 +17,23 @@ document.addEventListener('DOMContentLoaded', function () {
         interactivity: {
             events: { onhover: { enable: true, mode: 'repulse' } },
         },
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            if (link.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                const targetSection = document.getElementById(targetId);
+                targetSection.classList.add('active');
+            }
+        });
+    });
+
+    mobileMenuIcon.addEventListener('click', function () {
+        navLinksContainer.classList.toggle('active');
     });
 });
