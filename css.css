@@ -86,15 +86,6 @@ nav a {
 /* Mobile menu icon */
 .mobile-menu-icon {
     display: none; /* Initially hide on larger screens */
-    cursor: pointer;
-}
-
-/* Style for the bars */
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #000;
-    margin: 5px 0;
 }
 
 /* Media query for mobile devices */
@@ -102,10 +93,11 @@ nav a {
     header h1 {
         font-size: 1.5rem; /* Decrease font size */
     }
-
+    
     /* Show mobile menu icon */
     .mobile-menu-icon {
         display: block;
+        cursor: pointer;
     }
 
     /* Hide regular nav links */
