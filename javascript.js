@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+
     // Get the navigation links
     const navLinks = document.querySelectorAll('nav a');
 
@@ -27,15 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // Check if the link is an internal link (starts with #)
             if (link.getAttribute('href').startsWith('#')) {
                 e.preventDefault(); // Prevent the default behavior of link clicks
-        
                 // Get the target section ID from the link's 'href' attribute
                 const targetId = link.getAttribute('href').substring(1);
-        
                 // Hide all sections
                 sections.forEach(section => {
                     section.classList.remove('active');
                 });
-        
                 // Show the target section
                 const targetSection = document.getElementById(targetId);
                 targetSection.classList.add('active');

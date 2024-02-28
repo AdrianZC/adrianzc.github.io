@@ -43,7 +43,7 @@ h2 {
 
 /* Nav section */
 nav {
-    text-align: right; /* Align navigation to the right */
+    text-align: right;
 }
 
 nav ul {
@@ -54,7 +54,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-left: 1rem; /* Adjust margin to add spacing between items */
+    margin-left: 1rem;
 }
 
 nav a {
@@ -85,27 +85,21 @@ nav a {
 
 /* Mobile menu icon */
 .mobile-menu-icon {
-    display: none; /* Initially hide on larger screens */
+    display: none;
 }
 
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
     header h1 {
-        font-size: 1.5rem; /* Decrease font size */
+        font-size: 1.5rem;
     }
-    
-    /* Show mobile menu icon */
     .mobile-menu-icon {
         display: block;
         cursor: pointer;
     }
-
-    /* Hide regular nav links */
     .nav-links {
         display: none;
     }
-
-    /* Show nav links when menu is open */
     .nav-links.active {
         display: flex;
     }
@@ -113,10 +107,10 @@ nav a {
 
 /* Main content sections */
 section {
-    display: flex; /* Use flexbox for section content */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Vertically center content */
-    align-items: center; /* Horizontally center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0rem 1rem;
     flex: 1;
     margin: 0;
@@ -134,9 +128,9 @@ section {
 /* Page active section */
 .page.active {
     display: flex;
-    animation: slideIn 0.5s ease-in-out; /* Add a slide-in animation */
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
+    animation: slideIn 0.5s ease-in-out;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Contact section */
@@ -156,10 +150,10 @@ section {
 @keyframes slideIn {
     0% {
         opacity: 0;
-        transform: translateY(20px); /* Start slightly below */
+        transform: translateY(20px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Move to original position */
+        transform: translateY(0);
     }
 }
