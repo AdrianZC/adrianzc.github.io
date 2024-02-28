@@ -103,11 +103,11 @@ nav a {
     .nav-links.active {
         display: flex;
     }
-
+    /* Added styles for the abbreviation */
     header h1::after {
-        content:"AZC";
-        font-family: "Namdhinggo", sans-serif;
-        font-size: 1.5rem;
+        content: "AZC";
+        font-family: "Namdhinggo", sans-serif; /* Specify the same font-family as header h1 */
+        font-size: 1.2rem;
         margin-left: 5px;
     }
 }
