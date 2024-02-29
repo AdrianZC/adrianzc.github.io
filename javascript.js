@@ -45,26 +45,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
 
     // Get the navigation links container
-    const navLinksContainer = document.querySelector('nav');
+    const navLinksContainer = document.querySelector('.nav-links');
 
     // Toggle menu visibility when the mobile menu icon is clicked
     mobileMenuIcon.addEventListener('click', function () {
         navLinksContainer.classList.toggle('active');
     });
-
-    // Dynamically change the name to "AZC" on mobile screens
-    function updateName() {
-        const nameElement = document.querySelector('header h1');
-        if (window.innerWidth <= 768) {
-            nameElement.textContent = "AZC";
-        } else {
-            nameElement.textContent = "Adrian Zhu Chou";
-        }
-    }
-
-    // Initial call to update the name based on screen width
-    updateName();
-
-    // Listen for window resize events to update the name dynamically
-    window.addEventListener('resize', updateName);
 });

@@ -62,50 +62,46 @@ nav a {
     text-decoration: none;
 }
 
-/* Nav links section */
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0.5rem;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #007bff;
-}
-
 /* Mobile menu icon */
 .mobile-menu-icon {
-    display: none;
+    display: block;
+    cursor: pointer;
+    padding: 10px;
 }
 
-/* Media query for mobile devices */
-@media only screen and (max-width: 768px) {
-    header h1 span.full-name {
-        display: none; /* Hide the full name on mobile */
-    }
-    header h1 span.abbreviation {
-        display: inline; /* Show the abbreviation on mobile */
-    }
-    .mobile-menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-    .nav-links {
-        display: none;
-    }
-    .nav-links.active {
-        display: flex;
-    }
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+}
+
+/* Hide nav links by default */
+.nav-links {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+/* Show nav links when active class is applied */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff; /* Background color for better visibility */
+    position: absolute;
+    top: 60px; /* Adjust according to your header height */
+    left: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.nav-links.active li {
+    margin-left: 0;
+}
+
+.nav-links.active a {
+    color: #000; /* Change link color for better visibility */
+    font-size: 1.5rem; /* Adjust font size for better visibility */
 }
 
 /* Main content sections */
