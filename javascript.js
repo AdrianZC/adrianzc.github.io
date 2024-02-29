@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
 
     // Get the navigation links container
-    const navLinksContainer = document.querySelector('.nav-links');
+    const navLinksContainer = document.querySelector('nav');
 
     // Toggle menu visibility when the mobile menu icon is clicked
     mobileMenuIcon.addEventListener('click', function () {
