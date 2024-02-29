@@ -91,10 +91,10 @@ nav a {
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
     header h1 span.full-name {
-        display: none; /* Hide the full name on mobile */
+        display: none;
     }
     header h1 span.abbreviation {
-        display: inline; /* Show the abbreviation on mobile */
+        display: inline;
     }
     .mobile-menu-icon {
         display: block;
@@ -125,7 +125,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 
 /* Page active section */
