@@ -85,17 +85,16 @@ nav a {
 
 /* Mobile menu icon */
 .mobile-menu-icon {
-    display: block;
-    cursor: pointer;
+    display: none;
 }
 
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
     header h1 span.full-name {
-        display: none;
+        display: none; /* Hide the full name on mobile */
     }
     header h1 span.abbreviation {
-        display: inline;
+        display: inline; /* Show the abbreviation on mobile */
     }
     .mobile-menu-icon {
         display: block;
