@@ -41,17 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Get the mobile menu icon
-    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
-
-    // Get the navigation links container
-    const navLinksContainer = document.querySelector('nav');
-
-    // Toggle menu visibility when the mobile menu icon is clicked
-    mobileMenuIcon.addEventListener('click', function () {
-        navLinksContainer.classList.toggle('active');
-    });
-
     // Dynamically change the name to "AZC" on mobile screens
     function updateName() {
         const nameElement = document.querySelector('header h1');

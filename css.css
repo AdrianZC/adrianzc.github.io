@@ -83,31 +83,6 @@ nav a {
     color: #007bff;
 }
 
-/* Mobile menu icon */
-.mobile-menu-icon {
-    display: none;
-}
-
-/* Media query for mobile devices */
-@media only screen and (max-width: 768px) {
-    header h1 span.full-name {
-        display: none;
-    }
-    header h1 span.abbreviation {
-        display: inline;
-    }
-    .mobile-menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-    .nav-links {
-        display: none;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-}
-
 /* Main content sections */
 section {
     display: flex;
@@ -157,5 +132,22 @@ section {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    header h1 span.full-name {
+        display: none;
+    }
+    header h1 span.abbreviation {
+        display: inline;
+    }
+    /* Remove mobile menu icon styles */
+    .mobile-menu-icon {
+        display: none;
+    }
+    .nav-links {
+        display: flex; /* Ensure navigation links are always visible on mobile */
     }
 }
